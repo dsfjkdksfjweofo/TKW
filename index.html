@@ -1,240 +1,252 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Shop - Chuyên Nghiệp</title>
+    <title>Web Shop - Thiết Kế Website Bán Hàng Chuyên Nghiệp</title>
     <style>
-        /* Reset CSS */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
-        
+
         body {
-            background-color: #f5f5f5;
+            background: linear-gradient(to bottom, #6CD0E0, #3498db);
             color: #333;
-            line-height: 1.6;
         }
-        
-        /* Header */
+
         header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
+            background-color: white;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        
-        .slogan {
-            font-size: 18px;
-            font-style: italic;
-        }
-        
-        /* Navigation */
-        nav {
-            background-color: #34495e;
-        }
-        
-        .main-menu {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            position: relative;
-        }
-        
-        .main-menu li {
-            padding: 15px 20px;
-            position: relative;
-        }
-        
-        .main-menu li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        
-        .main-menu li:hover {
-            background-color: #16a085;
-        }
-        
-        /* Submenu */
-        .submenu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #fff;
-            width: 200px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            z-index: 100;
-        }
-        
-        .main-menu li:hover .submenu {
-            display: block;
-        }
-        
-        .submenu li {
-            padding: 10px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .submenu li a {
-            color: #333;
-        }
-        
-        .submenu li:hover {
-            background-color: #f1f1f1;
-        }
-        
-        /* Content */
+
         .container {
+            width: 90%;
             max-width: 1200px;
-            margin: 20px auto;
-            padding: 0 20px;
+            margin: 0 auto;
         }
-        
-        .intro {
-            background-color: white;
-            padding: 30px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .intro h2 {
-            color: #2c3e50;
-            margin-bottom: 15px;
-        }
-        
-        .services {
+
+        .header-content {
             display: flex;
-            flex-wrap: wrap;
             justify-content: space-between;
-            margin-bottom: 20px;
+            align-items: center;
         }
-        
-        .service-box {
-            flex-basis: 23%;
-            background-color: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            text-align: center;
+
+        .logo {
+            display: flex;
+            align-items: center;
         }
-        
-        .service-box h3 {
-            color: #16a085;
-            margin-bottom: 10px;
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
         }
-        
-        /* Footer */
-        footer {
-            background-color: #2c3e50;
+
+        .logo h1 {
+            font-size: 24px;
+        }
+
+        .logo span:first-child {
+            color: #1abc9c;
+        }
+
+        .logo span:last-child {
+            color: #e74c3c;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .search-register {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-icon {
+            margin-right: 15px;
+            font-size: 20px;
+            color: #1abc9c;
+        }
+
+        .register-btn {
+            background-color: #e74c3c;
             color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 20px;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
         }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .main-menu {
-                flex-direction: column;
-            }
-            
-            .main-menu li {
-                padding: 10px;
-            }
-            
-            .submenu {
-                position: static;
-                width: 100%;
-            }
-            
-            .services {
-                flex-direction: column;
-            }
-            
-            .service-box {
-                flex-basis: 100%;
-            }
+
+        /* Hero Section */
+        .hero {
+            padding: 50px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hero-text {
+            flex: 1;
+            padding-right: 30px;
+        }
+
+        .hero-text h2 {
+            color: white;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .features {
+            margin-top: 30px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .feature-icon {
+            margin-right: 10px;
+            background-color: #78e08f;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: right;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .contact-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #0b8043;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .contact-button i {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .bottom-register {
+            text-align: left;
+            margin-top: 40px;
+        }
+
+        .bottom-register .register-btn {
+            padding: 15px 30px;
+            font-size: 16px;
         }
     </style>
 </head>
+
 <body>
-    <!-- Header -->
     <header>
-        <div class="logo">Web Shop</div>
-        <div class="slogan">Chuyên Nghiệp</div>
-    </header>
-    
-    <!-- Navigation -->
-    <nav>
-        <ul class="main-menu">
-            <li><a href="#">Trang chủ</a></li>
-            <li>
-                <a href="#">Kho giao diện</a>
-                <ul class="submenu">
-                    <li><a href="#">Web thời trang</a></li>
-                    <li><a href="#">Web thực phẩm</a></li>
-                    <li><a href="#">Web đồ gia dụng</a></li>
-                    <li><a href="#">Web ô tô xe máy</a></li>
-                    <li><a href="#">Web thiết bị điện</a></li>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjMWFiYzljIiBkPSJNMzU0LjIsMzUxLjRjLTEuNi01LjktMi41LTEyLjEtMi41LTE4LjVjMC00NC4yLDM1LjgtODAsMTAuMDUsODAiLz48Y2lyY2xlIGZpbGw9IiMxYWJjOWMiIGN4PSIyNTYiIGN5PSIyNTYiIHI9IjE1MCIvPjxwYXRoIGZpbGw9IiNlNzRjM2MiIGQ9Ik0xNTAsMzUwVjE1MGg4MHYyMDBIMTUwem0yMDAsMGgtMjAwdjUwaDIwMFYzNTB6Ii8+PC9zdmc+"
+                    alt="Web Shop Logo">
+                <h1><span>Web</span> <span>Shop</span></h1>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Kho giao diện</a></li>
+                    <li><a href="#">Tính năng</a></li>
+                    <li><a href="#">Khách hàng</a></li>
                 </ul>
-            </li>
-            <li><a href="#">Tính năng</a></li>
-            <li><a href="#">Khách hàng</a></li>
-            <li><a href="#">Đăng ký dùng thử</a></li>
-        </ul>
-    </nav>
-    
-    <!-- Content -->
-    <div class="container">
-        <div class="intro">
-            <h2>Vận hành kinh doanh chuyển đổi "Chat" trên Zalo & Messenger... thành đơn hàng</h2>
-            <p>Sử dụng công nghệ html5, css3, Responsive mobile tương thích di động, máy tính bảng.</p>
-            <p>Thiết kế độc quyền phù hợp với từng ngành nghề lĩnh vực.</p>
-            <p>Giao diện hoàn mỹ đến từng chi tiết, tính năng hiện đại.</p>
-        </div>
-        
-        <div class="intro">
-            <h2>Đăng ký Dùng Thử</h2>
-            <p>NHU CẦU THIẾT KẾ WEBSITE CỦA BẠN</p>
-            <p>Website của chúng tôi phù hợp với tất cả mọi người dù bạn là người mới bắt đầu hay chuyên gia.</p>
-        </div>
-        
-        <div class="services">
-            <div class="service-box">
-                <h3>WEBSITE CÔNG TY</h3>
-                <p>Thiết kế chuyên nghiệp cho doanh nghiệp</p>
-            </div>
-            <div class="service-box">
-                <h3>GIỚI THIỆU CÔNG TY</h3>
-                <p>Quảng bá hình ảnh doanh nghiệp</p>
-            </div>
-            <div class="service-box">
-                <h3>SHOP BÁN HÀNG</h3>
-                <p>Bán hàng online hiệu quả</p>
-            </div>
-            <div class="service-box">
-                <h3>THEO YÊU CẦU RIÊNG</h3>
-                <p>Thiết kế theo nhu cầu cụ thể</p>
+            </nav>
+
+            <div class="search-register">
+                <div class="search-icon">🔍</div>
+                <button class="register-btn">Đăng Ký Dùng Thử</button>
             </div>
         </div>
-    </div>
-    
-    <!-- Footer -->
-    <footer>
-        <p>Copyright: WebShop.com.vn</p>
-    </footer>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero">
+                <div class="hero-text">
+                    <h2>Thiết Kế Website Bán Hàng Chuyên Nghiệp</h2>
+
+                    <div class="features">
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div>Vận hành kinh doanh chuyển đổi "Chat" trên Zalo & Messenger... thành đơn hàng.</div>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div>Sử dụng công nghệ html5, css3, Responsive mobile tương thích di động, máy tính bảng.
+                            </div>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div>Thiết kế độc quyền phù hợp với từng ngành nghề lĩnh vực.</div>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div>Giao diện hoàn mỹ đến từng chi tiết, tính năng hiện đại.</div>
+                        </div>
+                    </div>
+
+                    <div class="bottom-register">
+                        <button class="register-btn">Đăng Ký Dùng Thử</button>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img src="/api/placeholder/600/500" alt="Website Example">
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
+
 </html>
