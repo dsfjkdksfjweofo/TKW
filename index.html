@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Shop - Chuyên Nghiệp</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Header */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .slogan {
+            font-size: 18px;
+            font-style: italic;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: #34495e;
+        }
+        
+        .main-menu {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            position: relative;
+        }
+        
+        .main-menu li {
+            padding: 15px 20px;
+            position: relative;
+        }
+        
+        .main-menu li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .main-menu li:hover {
+            background-color: #16a085;
+        }
+        
+        /* Submenu */
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            width: 200px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 100;
+        }
+        
+        .main-menu li:hover .submenu {
+            display: block;
+        }
+        
+        .submenu li {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .submenu li a {
+            color: #333;
+        }
+        
+        .submenu li:hover {
+            background-color: #f1f1f1;
+        }
+        
+        /* Content */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        
+        .intro {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .intro h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
+        .service-box {
+            flex-basis: 23%;
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .service-box h3 {
+            color: #16a085;
+            margin-bottom: 10px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-menu {
+                flex-direction: column;
+            }
+            
+            .main-menu li {
+                padding: 10px;
+            }
+            
+            .submenu {
+                position: static;
+                width: 100%;
+            }
+            
+            .services {
+                flex-direction: column;
+            }
+            
+            .service-box {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Web Shop</div>
+        <div class="slogan">Chuyên Nghiệp</div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <ul class="main-menu">
+            <li><a href="#">Trang chủ</a></li>
+            <li>
+                <a href="#">Kho giao diện</a>
+                <ul class="submenu">
+                    <li><a href="#">Web thời trang</a></li>
+                    <li><a href="#">Web thực phẩm</a></li>
+                    <li><a href="#">Web đồ gia dụng</a></li>
+                    <li><a href="#">Web ô tô xe máy</a></li>
+                    <li><a href="#">Web thiết bị điện</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Tính năng</a></li>
+            <li><a href="#">Khách hàng</a></li>
+            <li><a href="#">Đăng ký dùng thử</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Content -->
+    <div class="container">
+        <div class="intro">
+            <h2>Vận hành kinh doanh chuyển đổi "Chat" trên Zalo & Messenger... thành đơn hàng</h2>
+            <p>Sử dụng công nghệ html5, css3, Responsive mobile tương thích di động, máy tính bảng.</p>
+            <p>Thiết kế độc quyền phù hợp với từng ngành nghề lĩnh vực.</p>
+            <p>Giao diện hoàn mỹ đến từng chi tiết, tính năng hiện đại.</p>
+        </div>
+        
+        <div class="intro">
+            <h2>Đăng ký Dùng Thử</h2>
+            <p>NHU CẦU THIẾT KẾ WEBSITE CỦA BẠN</p>
+            <p>Website của chúng tôi phù hợp với tất cả mọi người dù bạn là người mới bắt đầu hay chuyên gia.</p>
+        </div>
+        
+        <div class="services">
+            <div class="service-box">
+                <h3>WEBSITE CÔNG TY</h3>
+                <p>Thiết kế chuyên nghiệp cho doanh nghiệp</p>
+            </div>
+            <div class="service-box">
+                <h3>GIỚI THIỆU CÔNG TY</h3>
+                <p>Quảng bá hình ảnh doanh nghiệp</p>
+            </div>
+            <div class="service-box">
+                <h3>SHOP BÁN HÀNG</h3>
+                <p>Bán hàng online hiệu quả</p>
+            </div>
+            <div class="service-box">
+                <h3>THEO YÊU CẦU RIÊNG</h3>
+                <p>Thiết kế theo nhu cầu cụ thể</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <p>Copyright: WebShop.com.vn</p>
+    </footer>
+</body>
+</html>
